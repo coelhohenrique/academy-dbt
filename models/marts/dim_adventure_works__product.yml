@@ -6,6 +6,9 @@ models:
     columns:
       - name: product_id
         description: "Product unique identifier"
+        tests:
+          - unique
+          - not_null
 
       - name: product_name
         description: "Name of the product"

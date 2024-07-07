@@ -6,9 +6,14 @@ models:
     columns:
       - name: business_entity_id
         description: "Business entity unique identifier"
+        tests:
+          - not_null
 
       - name: customer_id
         description: "Customer unique identifier"
+        tests:
+          - unique
+          - not_null
 
       - name: store_id
         description: "Store unique identifier"

@@ -6,9 +6,13 @@ models:
     columns:
       - name: sales_order_id
         description: "Sales order unique identifier"
+        tests:
+          - not_null
 
       - name: sales_order_detail_id
         description: "Sales order detail unique identifier"
+        tests:
+          - not_null
 
       - name: customer_id
         description: "Customer unique identifier"

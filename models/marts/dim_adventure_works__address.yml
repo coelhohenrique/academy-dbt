@@ -6,6 +6,9 @@ models:
     columns:
       - name: address_id
         description: "Address unique identifier"
+        tests:
+          - unique
+          - not_null 
 
       - name: address_line_1
         description: "Address first line"

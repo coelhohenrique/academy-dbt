@@ -6,22 +6,34 @@ models:
     columns:
       - name: sales_order_id
         description: "Sales order unique identifier"
+        tests:
+          - not_null
 
       - name: customer_id
         description: "Customer unique identifier"
+        tests:
+          - not_null
 
       - name: address_id
         description: "Address unique identifier"
+        tests:
+          - not_null
 
       - name: credit_card_id
         description: "Credit card unique identifier"
+        tests:
+          - not_null
 
       - name: product_id
         description: "Product unique identifier"
+        tests:
+          - not_null
 
       - name: order_date
         description: "Date the sales order was created"
-
+        tests:
+          - not_null
+          
       - name: due_date
         description: "Date the order is due to the customer"
 

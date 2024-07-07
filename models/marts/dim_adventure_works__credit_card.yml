@@ -6,6 +6,9 @@ models:
     columns:
       - name: credit_card_id
         description: "Credit card unique identifier"
+        tests:
+          - unique
+          - not_null
 
       - name: card_type
         description: "Describes the card type"

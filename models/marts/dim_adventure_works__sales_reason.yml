@@ -6,6 +6,9 @@ models:
     columns:
       - name: sales_order_id
         description: "Sales order unique identifier"
+        tests:
+          - unique
+          - not_null
 
       - name: is_marketing_reason_type
         description: "Boolean type column to identify if reason type was marketing"
