@@ -31,7 +31,7 @@ with
 
     , reporting_table as (
         select
-            sales_reason_info.sales_order_id -- Join key to sales_reason_info
+            order_info.sales_order_id -- Join key to sales_reason_info
             , customer_info.customer_id -- Join key to customer_info
             , address_info.address_id -- Join key to address_info
             , credit_card_info.credit_card_id -- Join key to credit_card_info

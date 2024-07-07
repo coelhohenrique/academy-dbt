@@ -5,7 +5,10 @@ with
     )
 
     , order_detail_info as (
-        select *
+        select 
+            *
+            , order_qty * unit_price as product_gross_sales
+            , order_qty * unit_price - (1 - unit_price_discount) as product_net_sales
         from {{ ref('stg_adventure_works__salesorderdetail') }}
     )
 
@@ -37,17 +40,11 @@ with
             , order_detail_info.special_offer_id
             , order_detail_info.unit_price
             , order_detail_info.unit_price_discount
+            , order_detail_info.product_gross_sales
+            , order_detail_info.product_net_sales
         from order_info
         left join order_detail_info
-            on order_info.sales_order_id = order_detail_info.sales_order_id
+            on order_detail_info.sales_order_id = order_info.sales_order_id
     )
 
-    , adding_gross_net_sales as (
-        select
-            *
-            , order_qty * unit_price as product_gross_sales
-            , order_qty * unit_price - (1 - unit_price_discount) as product_net_sales
-        from joining
-    )
-
-select * from adding_gross_net_sales
+select * from joining
