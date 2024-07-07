@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_adventure_works__salesorderdetail
+    description: "Staging table that displays details about sales orders"
+    columns:
+      - name: sales_order_id
+        description: "Sales order unique identifier"
+
+      - name: sales_order_detail_id
+        description: "Sales order detail unique identifier"
+
+      - name: carrier_tracking_number
+        description: "Shipment tracking number supplied by the shipper"
+
+      - name: order_qty
+        description: "Quantity ordered per product"
+
+      - name: product_id
+        description: "Product unique identifier"
+
+      - name: special_offer_id
+        description: "Promotional code unique identifier"
+
+      - name: unit_price
+        description: "Selling price of product"
+
+      - name: unit_price_discount
+        description: "Discount amount for a product"
+
+      - name: row_guid
+        description: "Row unique identifier"
+
+      - name: modified_date
+        description: "Date of record modification"

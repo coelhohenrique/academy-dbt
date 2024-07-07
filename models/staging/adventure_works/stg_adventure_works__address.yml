@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_adventure_works__address
+    description: "Staging table that displays address information"
+    columns:
+      - name: address_id
+        description: "Address unique identifier"
+
+      - name: address_line_1
+        description: "Address first line"
+
+      - name: address_line_2
+        description: "Address second line"
+
+      - name: city
+        description: "Name of address city"
+
+      - name: state_province_id
+        description: "State province unique identifier"
+
+      - name: postal_code
+        description: "Address postal code"
+
+      - name: spatial_location
+        description: "Address spatial location"
+
+      - name: row_guid
+        description: "Row unique identifier"
+
+      - name: modified_date
+        description: "Date of record modification"

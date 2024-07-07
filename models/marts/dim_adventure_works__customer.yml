@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: dim_adventure_works__customer
+    description: "Dimension table that provides full information about customer"
+    columns:
+      - name: business_entity_id
+        description: "Business entity unique identifier"
+
+      - name: customer_id
+        description: "Customer unique identifier"
+
+      - name: store_id
+        description: "Store unique identifier"
+
+      - name: person_type
+        description: "Describes type of person"
+
+      - name: name_style
+        description: "Displays person name style"
+
+      - name: title
+        description: "Displays person title"
+
+      - name: first_name
+        description: "Person first name"
+
+      - name: middle_name
+        description: "Person middle name"
+
+      - name: last_name
+        description: "Person last name"
+
+      - name: suffix
+        description: "Displays name suffix"
+
+      - name: email_promotion
+        description: "Email promotion information"
+
+      - name: additional_contact_info
+        description: "Provides person additional contact information"
+
+      - name: demographics
+        description: "Demographics information survey"

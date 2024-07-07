@@ -27,7 +27,14 @@ with
             , order_info.order_date
             , order_info.due_date
             , order_info.ship_date
-            , order_info.status
+            , case 
+                when order_info.status = 1 then 'In process'
+                when order_info.status = 2 then 'Approved'
+                when order_info.status = 3 then 'Backordered'
+                when order_info.status = 4 then 'Rejected'
+                when order_info.status = 5 then 'Shipped'
+                when order_info.status = 6 then 'Canceled'
+            end as order_status
             , order_info.credit_card_approval_code 
             , order_info.subtotal
             , order_info.taxamt

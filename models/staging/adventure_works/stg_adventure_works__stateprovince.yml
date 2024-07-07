@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_adventure_works__stateprovince
+    description: "Staging table that provides information about state/province"
+    columns:
+      - name: state_province_id
+        description: "State province unique identifier"
+
+      - name: state_province_code
+        description: "State province code"
+
+      - name: country_region_code
+        description: "Country region code"
+
+      - name: is_only_state_province_flag
+        description: "Identifies if state province code exists or is unavailable"
+
+      - name: name
+        description: "State or province description"
+
+      - name: territory_id
+        description: "Territory unique identifier"
+
+      - name: row_guid
+        description: "Row unique identifier"
+
+      - name: modified_date
+        description: "Date of record modification"

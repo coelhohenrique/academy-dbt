@@ -1,0 +1,80 @@
+version: 2
+
+models:
+  - name: stg_adventure_works__salesorderheader
+    description: "Staging table that provides information about orders"
+    columns:
+      - name: sales_order_id
+        description: "Sales order unique identifier"
+
+      - name: revision_number
+        description: "Incremental number to track changes to the sales order over time"
+
+      - name: order_date
+        description: "Date the sales order was created"
+
+      - name: due_date
+        description: "Date the order is due to the customer"
+
+      - name: ship_date
+        description: "Date the order was shipped"
+
+      - name: status
+        description: "Order current status"
+
+      - name: online_order_flag
+        description: "Online flag order, 0 = Order placed by sales person, 1 = Order placed online by customer"
+
+      - name: purchase_order_number
+        description: "Unique sales order identification"
+
+      - name: account_number
+        description: "Financial accounting number reference"
+
+      - name: customer_id
+        description: "Customer unique identifier"
+
+      - name: sales_person_id
+        description: "Sales person unique identifier"
+
+      - name: territory_id
+        description: "Territory unique identifier"
+
+      - name: bill_to_address_id
+        description: "Customer billing address unique identifier"
+
+      - name: ship_to_address_id
+        description: "Shipment address unique identifier"
+
+      - name: ship_method_id
+        description: "Ship method unique identifier"
+
+      - name: credit_card_id
+        description: "Credit card unique identifier"
+
+      - name: credit_card_approval_code
+        description: "Credit card approval code"
+
+      - name: currency_rate_id
+        description: "Currency rate unique identifier"
+
+      - name: subtotal
+        description: "Sales subtotal"
+
+      - name: taxamt
+        description: "Tax amount"
+
+      - name: freight
+        description: "Shipping cost"
+
+      - name: total_due
+        description: "Total due from customer"
+
+      - name: comment
+        description: "Sales representative comments"
+
+      - name: rowguid
+        description: "Row unique identifier"
+
+      - name: modified_date
+        description: "Date of record modification"

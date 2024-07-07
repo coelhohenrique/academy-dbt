@@ -39,7 +39,7 @@ with
             , order_info.order_date
             , order_info.due_date
             , order_info.ship_date
-            , order_info.status
+            , order_info.order_status
             , order_info.credit_card_approval_code 
             , order_info.carrier_tracking_number
             , order_info.order_qty
