@@ -55,9 +55,9 @@ with
             , order_info.unit_price_discount
             , order_info.product_gross_sales
             , order_info.product_net_sales
-            , coalesce(sales_reason_info.is_marketing_reason_type, false)
-            , coalesce(sales_reason_info.is_promotion_reason_type, false)
-            , coalesce(sales_reason_info.is_other_reason_type, false)
+            , coalesce(sales_reason_info.is_marketing_reason_type, false) as is_marketing_reason_type
+            , coalesce(sales_reason_info.is_promotion_reason_type, false) as is_promotion_reason_type
+            , coalesce(sales_reason_info.is_other_reason_type, false) as is_other_reason_type
         from order_info
         left join sales_reason_info
             on order_info.sales_order_id = sales_reason_info.sales_order_id
