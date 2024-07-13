@@ -4,11 +4,14 @@ models:
   - name: dim_adventure_works__address
     description: "Dimension table that provides full information about address"
     columns:
-      - name: address_id
-        description: "Address unique identifier"
+      - name: address_sk
+        description: "Surrogate key based on address_id"
         tests:
           - unique
           - not_null 
+
+      - name: address_id
+        description: "Address unique identifier"
 
       - name: address_line_1
         description: "Address first line"

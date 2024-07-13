@@ -5,37 +5,48 @@ with
     )
 
     , address_info as (
-        select *
+        select
+            address_sk
+            , address_id
         from {{ ref('dim_adventure_works__address') }}
     )
 
     , credit_card_info as (
-        select *
+        select
+            credit_card_sk
+            , credit_card_id
         from {{ ref('dim_adventure_works__credit_card') }}
     )
 
     , customer_info as (
-        select *
+        select
+            customer_sk
+            , customer_id
         from {{ ref('dim_adventure_works__customer') }}
     )
 
     , product_info as (
-        select *
+        select
+            product_sk
+            , product_id
         from {{ ref('dim_adventure_works__product') }}
     )
 
     , sales_reason_info as (
-        select *
+        select
+            sales_order_sk
+            , sales_order_id
         from {{ ref('dim_adventure_works__sales_reason') }}
     )
 
     , reporting_table as (
         select
-            order_info.sales_order_id -- Join key to sales_reason_info
-            , customer_info.customer_id -- Join key to customer_info
-            , address_info.address_id -- Join key to address_info
-            , credit_card_info.credit_card_id -- Join key to credit_card_info
-            , product_info.product_id -- Join key to product_info
+            order_info.sales_order_id
+            , sales_reason_info.sales_order_sk as sales_order_fk -- Join key to sales_reason_info
+            , customer_info.customer_sk as customer_fk -- Join key to customer_info
+            , address_info.address_sk as address_fk -- Join key to address_info
+            , credit_card_info.credit_card_sk as credit_card_fk -- Join key to credit_card_info
+            , product_info.product_sk as product_fk-- Join key to product_info
             , order_info.order_date
             , order_info.due_date
             , order_info.ship_date

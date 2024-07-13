@@ -11,7 +11,8 @@ with
 
     , customer_person_info as (
         select
-            person_info.business_entity_id
+            {{ dbt_utils.generate_surrogate_key(['customer_id']) }} as customer_sk
+            , person_info.business_entity_id
             , customer_info.customer_id
             , customer_info.store_id
             , person_type

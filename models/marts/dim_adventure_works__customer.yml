@@ -4,16 +4,17 @@ models:
   - name: dim_adventure_works__customer
     description: "Dimension table that provides full information about customer"
     columns:
+      - name: customer_sk
+        description: "Surrogate key based on customer_id"
+        tests:
+          - unique
+          - not_null 
+
       - name: business_entity_id
         description: "Business entity unique identifier"
-        tests:
-          - not_null
 
       - name: customer_id
         description: "Customer unique identifier"
-        tests:
-          - unique
-          - not_null
 
       - name: store_id
         description: "Store unique identifier"

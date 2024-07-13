@@ -38,4 +38,11 @@ with
         group by sales_order_id
     )
 
-select * from dedup_sales_reason_model
+    , generating_surrogate_key as (
+        select
+            {{ dbt_utils.generate_surrogate_key(['sales_order_id']) }} as sales_order_sk
+            , *
+        from dedup_sales_reason_model
+    )
+
+select * from generating_surrogate_key

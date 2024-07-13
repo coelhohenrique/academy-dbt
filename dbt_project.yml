@@ -43,3 +43,7 @@ seeds:
   my_new_project: # <-- Name of the project. If you renamed your project you have to change this as well
     sap_adventure_works:
       +schema: sap_adw
+
+#dbt_project.yml
+vars:
+  surrogate_key_treat_nulls_as_empty_strings: true #turn on legacy behaviour

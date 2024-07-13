@@ -4,11 +4,14 @@ models:
   - name: dim_adventure_works__product
     description: "Dimension table that provides full information about products"
     columns:
-      - name: product_id
-        description: "Product unique identifier"
+      - name: product_sk
+        description: "Surrogate key based on product_id"
         tests:
           - unique
-          - not_null
+          - not_null 
+
+      - name: product_id
+        description: "Product unique identifier"
 
       - name: product_name
         description: "Name of the product"

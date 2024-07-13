@@ -1,7 +1,8 @@
 with
     product_info as (
         select
-            product_id
+            {{ dbt_utils.generate_surrogate_key(['product_id']) }} as product_sk
+            , product_id
             , product_name
             , product_number
             , make_flag

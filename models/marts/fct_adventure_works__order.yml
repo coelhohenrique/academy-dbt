@@ -9,23 +9,28 @@ models:
         tests:
           - not_null
 
-      - name: customer_id
-        description: "Customer unique identifier"
+      - name: sales_order_fk
+        description: "Sales order foreign key"
         tests:
           - not_null
 
-      - name: address_id
-        description: "Address unique identifier"
+      - name: customer_fk
+        description: "Customer foreign key"
         tests:
           - not_null
 
-      - name: credit_card_id
-        description: "Credit card unique identifier"
+      - name: address_fk
+        description: "Address foreign key"
         tests:
           - not_null
 
-      - name: product_id
-        description: "Product unique identifier"
+      - name: credit_card_fk
+        description: "Credit card foreign key"
+        tests:
+          - not_null
+
+      - name: product_fk
+        description: "Product foreign key"
         tests:
           - not_null
 

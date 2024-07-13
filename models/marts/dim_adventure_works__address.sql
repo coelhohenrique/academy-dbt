@@ -16,7 +16,8 @@ with
 
     , unioned_address as (
         select
-            address_info.address_id
+            {{ dbt_utils.generate_surrogate_key(['address_info.address_id']) }} as address_sk
+            , address_info.address_id
             , address_info.address_line_1
             , address_info.address_line_2
             , address_info.city as city_name
