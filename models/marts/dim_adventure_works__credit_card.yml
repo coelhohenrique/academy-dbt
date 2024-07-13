@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_adventure_works__credit_card
+    description: "Dimension table that displays full information about credit card"
+    columns:
+      - name: credit_card_sk
+        description: "Surrogate key based on credit_card_id"
+        tests:
+          - unique
+          - not_null 
+
+      - name: credit_card_id
+        description: "Credit card unique identifier"
+
+      - name: card_type
+        description: "Describes the card type"
+
+      - name: card_number
+        description: "Number of card"
+
+      - name: exp_month
+        description: "Displays the month of expire date"
+
+      - name: exp_year
+        description: "Displays the year of expire date"

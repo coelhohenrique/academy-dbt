@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: dim_adventure_works__address
+    description: "Dimension table that provides full information about address"
+    columns:
+      - name: address_sk
+        description: "Surrogate key based on address_id"
+        tests:
+          - unique
+          - not_null 
+
+      - name: address_id
+        description: "Address unique identifier"
+
+      - name: address_line_1
+        description: "Address first line"
+
+      - name: address_line_2
+        description: "Address second line"
+
+      - name: city_name
+        description: "Name of city"
+
+      - name: state_province_id
+        description: "State province unique identifier"
+
+      - name: postal_code
+        description: "Address postal code"
+
+      - name: spatial_location
+        description: "Address spatial location"
+
+      - name: state_province_code
+        description: "State province code"
+
+      - name: country_region_code
+        description: "Displays code for a country region"
+
+      - name: is_only_state_province_flag
+        description: "Identifies if state province code exists or is unavailable"
+
+      - name: state_name
+        description: "Name of state"
+
+      - name: territory_id
+        description: "Territory unique identifier"
+
+      - name: country_name
+        description: "Name of country"

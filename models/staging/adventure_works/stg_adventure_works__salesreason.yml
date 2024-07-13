@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_adventure_works__salesreason
+    description: "Staging table that displays sales reason for orders"
+    columns:
+      - name: sales_reason_id
+        description: "Sales reason unique identifier"
+
+      - name: sales_reason_name
+        description: "Sales reason name"
+
+      - name: sales_reason_type
+        description: "Sales reason type"
+
+      - name: modified_date
+        description: "Date of record modification"

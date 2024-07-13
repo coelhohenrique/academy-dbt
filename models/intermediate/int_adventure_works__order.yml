@@ -1,0 +1,93 @@
+version: 2
+
+models:
+  - name: int_adventure_works__order
+    description: "Intermediate table that displays information about orders"
+    columns:
+      - name: sales_order_id
+        description: "Sales order unique identifier"
+        tests:
+          - not_null
+
+      - name: sales_order_detail_id
+        description: "Sales order detail unique identifier"
+        tests:
+          - not_null
+
+      - name: customer_id
+        description: "Customer unique identifier"
+
+      - name: sales_person_id
+        description: "Sales person unique identifier"
+
+      - name: territory_id
+        description: "Territory unique identifier"
+
+      - name: bill_to_address_id
+        description: "Customer billing address unique identifier"
+
+      - name: ship_to_address_id
+        description: "Shipment address unique identifier"
+
+      - name: ship_method_id
+        description: "Ship method unique identifier"
+
+      - name: credit_card_id
+        description: "Credit card unique identifier"
+
+      - name: currency_rate_id
+        description: "Currency rate unique identifier"
+
+      - name: order_date
+        description: "Date the sales order was created"
+
+      - name: due_date
+        description: "Date the order is due to the customer"
+
+      - name: ship_date
+        description: "Date the order was shipped"
+
+      - name: status
+        description: "Order current status"
+
+      - name: credit_card_approval_code
+        description: "Credit card approval code"
+
+      - name: subtotal
+        description: "Sales subtotal"
+
+      - name: taxamt
+        description: "Tax amount"
+
+      - name: freight
+        description: "Shipping cost"
+
+      - name: total_due
+        description: "Total due from customer"
+
+      - name: comment
+        description: "Sales representative comments"
+
+      - name: carrier_tracking_number
+        description: "Shipment tracking number supplied by the shipper"
+
+      - name: order_qty
+        description: "Quantity ordered per product"
+
+      - name: product_id
+        description: "Product unique identifier"
+
+      - name: special_offer_id
+        description: "Promotional code unique identifier"
+
+      - name: unit_price
+        description: "Selling price of product"
+
+      - name: unit_price_discount
+        description: "Discount amount for a product"
+
+      - name: product_gross_sales
+        description: "Total gross sales for a product"
+
+      - name: product_net_sales
+        description: "Total net sales for a product"

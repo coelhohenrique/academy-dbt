@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_adventure_works__creditcard
+    description: "Staging table that displays credit card information"
+    columns:
+      - name: credit_card_id
+        description: "Credit card unique identifier"
+
+      - name: card_type
+        description: "Describes the card type"
+
+      - name: card_number
+        description: "Number of card"
+
+      - name: exp_month
+        description: "Displays the month of expire date"
+
+      - name: exp_year
+        description: "Displays the year of expire date"
+
+      - name: modified_date
+        description: "Date of record modification"

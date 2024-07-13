@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_adventure_works__countryregion
+    description: "Staging table that displays country/region information"
+    columns:
+      - name: country_region_code
+        description: "Displays code for a country region"
+
+      - name: name
+        description: "Country name"
+
+      - name: modified_date
+        description: "Date of record modification"

@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: fct_adventure_works__order
+    description: "Fact table providing order information"
+    columns:
+      - name: sales_order_id
+        description: "Sales order unique identifier"
+        tests:
+          - not_null
+
+      - name: customer_fk
+        description: "Customer foreign key"
+        tests:
+          - not_null
+
+      - name: address_fk
+        description: "Address foreign key"
+        tests:
+          - not_null
+
+      - name: credit_card_fk
+        description: "Credit card foreign key"
+
+      - name: product_fk
+        description: "Product foreign key"
+        tests:
+          - not_null
+
+      - name: order_date
+        description: "Date the sales order was created"
+        tests:
+          - not_null
+          
+      - name: due_date
+        description: "Date the order is due to the customer"
+
+      - name: ship_date
+        description: "Date the order was shipped"
+
+      - name: status
+        description: "Order current status"
+
+      - name: credit_card_approval_code
+        description: "Credit card approval code"
+
+      - name: carrier_tracking_number
+        description: "Shipment tracking number supplied by the shipper"
+
+      - name: order_qty
+        description: "Quantity ordered per product"
+
+      - name: unit_price
+        description: "Selling price of product"
+
+      - name: unit_price_discount
+        description: "Discount amount for a product"
+
+      - name: product_gross_sales
+        description: "Total gross sales for a product"
+
+      - name: product_net_sales
+        description: "Total net sales for a product"

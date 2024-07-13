@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: int_adventure_works__sales_reason
+    description: "Dimension table that provides information about sales reason"
+    columns:
+      - name: sales_order_id
+        description: "Sales order unique identifier"
+        tests:
+          - unique
+          - not_null 
+
+      - name: is_marketing_reason_type
+        description: "Boolean type column to identify if reason type was marketing"
+
+      - name: is_promotion_reason_type
+        description: "Boolean type column to identify if reason type was promotion"
+
+      - name: is_other_reason_type
+        description: "Boolean type column to identify if reason type was other"
