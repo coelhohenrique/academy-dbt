@@ -1,17 +1,14 @@
 version: 2
 
 models:
-  - name: dim_adventure_works__sales_reason
+  - name: int_adventure_works__sales_reason
     description: "Dimension table that provides information about sales reason"
     columns:
-      - name: sales_order_sk
-        description: "Surrogate key based on sales_order_id"
+      - name: sales_order_id
+        description: "Sales order unique identifier"
         tests:
           - unique
           - not_null 
-
-      - name: sales_order_id
-        description: "Sales order unique identifier"
 
       - name: is_marketing_reason_type
         description: "Boolean type column to identify if reason type was marketing"

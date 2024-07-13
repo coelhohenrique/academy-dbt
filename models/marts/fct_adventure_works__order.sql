@@ -4,6 +4,11 @@ with
         from {{ ref('int_adventure_works__order') }}
     )
 
+    , sales_reason_info as (
+        select *
+        from {{ ref('int_adventure_works__sales_reason') }}
+    )
+
     , address_info as (
         select
             address_sk
@@ -32,17 +37,9 @@ with
         from {{ ref('dim_adventure_works__product') }}
     )
 
-    , sales_reason_info as (
-        select
-            sales_order_sk
-            , sales_order_id
-        from {{ ref('dim_adventure_works__sales_reason') }}
-    )
-
     , reporting_table as (
         select
             order_info.sales_order_id
-            , sales_reason_info.sales_order_sk as sales_order_fk -- Join key to sales_reason_info
             , customer_info.customer_sk as customer_fk -- Join key to customer_info
             , address_info.address_sk as address_fk -- Join key to address_info
             , credit_card_info.credit_card_sk as credit_card_fk -- Join key to credit_card_info
@@ -58,7 +55,12 @@ with
             , order_info.unit_price_discount
             , order_info.product_gross_sales
             , order_info.product_net_sales
+            , coalesce(sales_reason_info.is_marketing_reason_type, false)
+            , coalesce(sales_reason_info.is_promotion_reason_type, false)
+            , coalesce(sales_reason_info.is_other_reason_type, false)
         from order_info
+        left join sales_reason_info
+            on order_info.sales_order_id = sales_reason_info.sales_order_id
         left join address_info
             on order_info.bill_to_address_id = address_info.address_id
         left join credit_card_info
@@ -67,8 +69,6 @@ with
             on order_info.customer_id = customer_info.customer_id
         left join product_info
             on order_info.product_id = product_info.product_id
-        left join sales_reason_info
-            on order_info.sales_order_id = sales_reason_info.sales_order_id
     )
 
 select * from reporting_table
