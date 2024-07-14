@@ -25,6 +25,9 @@ models:
       - name: last_name
         description: "Person last name"
 
+      - name: person_full_name
+        description: "Person full name"
+
       - name: suffix
         description: "Displays name suffix"
 

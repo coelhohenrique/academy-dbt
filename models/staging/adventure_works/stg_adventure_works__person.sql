@@ -16,6 +16,7 @@ renamed as (
         , firstname as first_name
         , middlename as middle_name
         , lastname as last_name
+        , concat(ifnull(first_name, ''), ' ', ifnull(middle_name, ''), ' ', ifnull(last_name, '')) as person_full_name
         , suffix
         , emailpromotion as email_promotion
         , additionalcontactinfo as additional_contact_info
