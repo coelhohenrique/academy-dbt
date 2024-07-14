@@ -5,6 +5,12 @@ sources:
   schema: sap_adw
   tables:
   - name: address
+    columns:
+      - name: addressid
+        description: Adress table primary key
+        tests:
+          - unique
+          - not_null
   - name: addresstype
   - name: billofmaterials
   - name: businessentity
@@ -12,12 +18,31 @@ sources:
   - name: businessentitycontact
   - name: contacttype
   - name: countryregion
+    columns:
+      - name: countryregioncode
+        description: Country/Region table primary key
+        tests:
+          - unique
+          - not_null
   - name: countryregioncurrency
   - name: creditcard
+    columns:
+      - name: creditcardid
+        description: Credit card table primary key
+        tests:
+          - unique
+          - not_null
+
   - name: culture
   - name: currency
   - name: currencyrate
   - name: customer
+    columns:
+      - name: customerid
+        description: Customer table primary key
+        tests:
+          - unique
+          - not_null
   - name: department
   - name: emailaddress
   - name: employee
@@ -27,10 +52,22 @@ sources:
   - name: jobcandidate
   - name: location
   - name: person
+    columns:
+      - name: businessentityid
+        description: Person table primary key
+        tests:
+          - unique
+          - not_null
   - name: personcreditcard
   - name: personphone
   - name: phonenumbertype
   - name: product
+    columns:
+      - name: productid
+        description: Product table primary key
+        tests:
+          - unique
+          - not_null
   - name: productcategory
   - name: producthistory
   - name: productdescription
@@ -46,11 +83,30 @@ sources:
   - name: purchaseorderdetail
   - name: purchaseorderheader
   - name: salesorderdetail
+    columns:
+      - name: salesorderdetailid
+        description: Order detail table primary key
+        tests:
+          - unique
+          - not_null
   - name: salesorderheader
+    columns:
+      - name: salesorderid
+        description: Order table primary key
+        tests:
+          - unique
+          - not_null
   - name: salesorderheadersalesreason
   - name: salesperson
   - name: salespersonquotahistory
   - name: salesreason
+    columns:
+      - name: salesreasonid
+        description: Sales reason table primary key
+        tests:
+          - unique
+          - not_null
+
   - name: salestaxrate
   - name: salesterritoryhistory
   - name: scrapreason
@@ -60,7 +116,19 @@ sources:
   - name: specialoffer
   - name: specialofferproduct
   - name: stateprovince
+    columns:
+      - name: stateprovinceid
+        description: State/Province table primary key
+        tests:
+          - unique
+          - not_null
   - name: store
+    columns:
+      - name: businessentityid
+        description: Store table primary key
+        tests:
+          - unique
+          - not_null
   - name: transactionhistory
   - name: transactionhistoryarchive
   - name: unitmeasure
