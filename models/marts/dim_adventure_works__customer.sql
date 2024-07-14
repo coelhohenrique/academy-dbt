@@ -20,12 +20,14 @@ with
             , person_info.business_entity_id
             , customer_info.customer_id
             , customer_info.store_id
+            , coalesce(store_info.store_name, person_info.person_full_name) as customer_name
             , person_info.person_type
             , person_info.name_style
             , person_info.title
             , person_info.first_name
             , person_info.middle_name
             , person_info.last_name
+            , person_info.person_full_name
             , person_info.suffix
             , person_info.email_promotion
             , person_info.additional_contact_info

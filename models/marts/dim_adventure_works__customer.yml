@@ -19,6 +19,9 @@ models:
       - name: store_id
         description: "Store unique identifier"
 
+      - name: customer_id
+        description: "Name of the customer (If customer is not a store, then displays person name)"
+
       - name: person_type
         description: "Describes type of person"
 
@@ -36,6 +39,9 @@ models:
 
       - name: last_name
         description: "Person last name"
+
+      - name: person_full_name
+        description: "Person full name"
 
       - name: suffix
         description: "Displays name suffix"
