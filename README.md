@@ -12,6 +12,8 @@ The repository was initially **forked from a base challenge repository**, which 
 
 This implementation showcases best practices in data modeling, transformation logic, testing, and visualization—all integrated into a clean and scalable architecture.
 
+![image](https://github.com/user-attachments/assets/d56c34ed-fafe-4b4a-b8cc-a09729597f64)
+
 ---
 
 ## 🛠️ Tech Stack
