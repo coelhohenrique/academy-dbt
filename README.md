@@ -1,25 +1,70 @@
-# Indicium Academy
+# 🧱 Modern Data Stack: dbt + Snowflake + Power BI
 
-Repositório para ser utilizado no desafio para a obtenção da certificação de Analytics Engineer by Indicium. Faça o fork deste repositório e o utilize durante o desafio para fazer a insgestão das tabelas do SAP do Adventure Works.
+This project is a complete **end-to-end data stack implementation** using **dbt**, **Snowflake**, and **Power BI**. The goal was to design and build a modern analytics pipeline that transforms raw data into meaningful insights using a **star schema dimensional model**. This project was developed as part of a data challenge, with all data modeling, testing, and dashboarding done by me.
 
-## Instruções
+---
 
-Todas as tabelas do banco fonte do SAP da Adventure Works serão carregadas como seeds pelo dbt. Os arquivos .csv com os dados já estão na pasta de seeds.
+## 🚀 Project Overview
 
-Para fazer o carregamento de todas as tabelas usem o comando:
-- `dbt seed`
+This project demonstrates a complete **end-to-end analytics pipeline** using modern data stack, built with **dbt**, **Snowflake**, and **Power BI**. It was developed to solve a business case challenge from Indicium Academy, by transforming raw data into actionable insights.
 
-Para carregar uma tabela especifíca utilizem o comando
-- `dbt seed -s nome_do_csv`
+The repository was initially **forked from a base challenge repository**, which provided only **raw tables and seed data without any transformations**. From there, I independently designed and implemented the entire **dimensional data model** using a **star schema approach**, created robust **data quality tests** in dbt, and developed a **focused Power BI dashboard** to deliver clear, business-relevant insights.
 
-### Problemas comuns
+This implementation showcases best practices in data modeling, transformation logic, testing, and visualization—all integrated into a clean and scalable architecture.
 
-Em caso a linha de comando do dbt fique com o status de estar sempre carregando, ou, o job do comando `dbt seed` fique rodando indefinitivamente mesmo após as 64 tabelas forem carregadas você precisará reiniciar o terminal. Para isso, clique nos três pontos no canto inferior esquerdo ou no lado esquero da linha de comando e escolha a opção `Restart IDE`.
+---
+
+## 🛠️ Tech Stack
+
+| Tool         | Purpose                                          |
+|--------------|--------------------------------------------------|
+| **dbt**      | Transformations, testing, and documentation       |
+| **Snowflake**| Cloud data warehouse for scalable storage & compute |
+| **Power BI** | Interactive business dashboard for data analysis  |
+
+---
+
+## 📐 Key Developments
+
+### ⭐ Dimensional Modeling
+
+- Designed a **star schema** with **fact** and **dimension** tables to support analytical queries.
+- Structured the model to answer a defined set of business questions efficiently.
+- Emphasis was placed on **performance**, **clarity**, and **scalability**.
+
+### ✅ Data Quality with dbt Tests
+
+- Implemented **data validation tests** using dbt to ensure:
+  - Not null constraints  
+  - Uniqueness checks  
+  - Referential integrity  
+- Developed **custom tests** where applicable to validate business logic.
+
+### 📊 Power BI Dashboard
+
+- Built a **dynamic, user-friendly Power BI dashboard** to answer business questions from the challenge.
+- Visualized KPIs and business metrics derived from the star schema.
+- Ensured all visuals are **driven by curated dbt models** for traceability and consistency.
+
+---
+
+## ✅ Benefits of This Implementation
+
+- **End-to-End Visibility**: Clear lineage from raw data to final dashboard.
+- **Data Quality Assurance**: Built-in data testing for trusted insights.
+- **Scalable & Maintainable**: Modular design using dbt enables easy future expansion.
+- **Analytical Efficiency**: Star schema optimized for fast querying and reporting.
+- **Seamless Integration**: Smooth interoperability between Snowflake, dbt, and Power BI.
+
+---
+
+## 📌 Notes
+
+- This project began as a **fork** of the original challenge repository.
+- The forked repo contained **only untransformed seed data** and raw tables.
+- All **data modeling, testing, and dashboarding** in this repo was developed **from scratch** by me.
+- The main focus of the challenge was on **data modeling and transformation**, rather than data visualization. As such, the Power BI dashboard includes only the **essential visuals necessary to answer the business questions** effectively.
 
 
-## Recursos:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](http://community.getbdt.com/) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+---
+
