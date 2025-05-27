@@ -70,3 +70,15 @@ This implementation showcases best practices in data modeling, transformation lo
 
 ---
 
+## 📄 Documentation & Assets
+
+All relevant documentation and assets related to this project are included within the repository:
+
+- **dbt Models and Tests**: Located in the `/models` and `/tests` directories.
+- **Data Seeds**: Available in the `/seeds` directory.
+- **Power BI Dashboard**: Included in the main folder as a `.pbix` file.
+- **Data Modelling Diagram**: Included in the main folder as a `.pdf` file.
+- **Figma Dashboard Mockup**: Included in the main folder as a `.png` file.
+
+Please refer to these files and folders for full visibility into the modeling, testing, and reporting components of this implementation.
+
